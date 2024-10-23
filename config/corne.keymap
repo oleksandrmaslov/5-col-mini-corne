@@ -32,7 +32,7 @@
 &none  &kp Q           &kp W           &kp E                 &kp R             &kp T          &kp Y        &kp U             &kp I         &kp O                 &mt SQT P               &none
 &none  &mt LEFT_WIN A  &mt LEFT_ALT S  &mt LCTRL D           &mt LEFT_SHIFT F  &kp G          &kp H        &mt LEFT_SHIFT J  &mt LCTRL K   &mt LEFT_ALT L        &mt LEFT_WIN SEMI       &none
 &none  &kp Z           &kp X           &kp C                 &kp V             &kp B          &kp N        &kp M             &kp COMMA     &mt LEFT_BRACKET DOT  &mt RIGHT_BRACKET FSLH  &none
-                                       &lt 1 LA(LEFT_SHIFT)  &lt 4 TAB         &lt 5 SPACE    &lt 3 ENTER  &kp BACKSPACE     &lt 2 ESCAPE
+                                       &lt 1 LA(LEFT_SHIFT)  &lt 2 TAB         &lt 3 SPACE    &lt 4 ENTER  &kp BACKSPACE     &lt 5 ESCAPE
             >;
 
             label = "Base";
@@ -47,34 +47,6 @@
             >;
 
             label = "Move";
-        };
-
-        Function {
-            bindings = <
-&none  &kp F1  &kp F2   &kp F3   &kp F4   &none     &none   &none      &none      &none     &none     &none
-&none  &kp F5  &kp F6   &kp F7   &kp F8   &none     &none   &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &none
-&none  &kp F9  &kp F10  &kp F11  &kp F12  &none     &none   &none      &none      &none     &none     &none
-                        &trans   &trans   &trans    &trans  &trans     &trans
-            >;
-
-            label = "Fun";
-        };
-
-        Symbol {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BSPC |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
-            bindings = <
-&none  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &none
-&none  &none     &none   &none     &none     &kp TILDE    &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &none
-&none  &none     &none   &none     &none     &none        &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &none
-                         &trans    &trans    &trans       &trans     &trans     &trans
-            >;
-
-            label = "Sym";
         };
 
         Number {
@@ -97,6 +69,34 @@
             >;
 
             label = "Media";
+        };
+
+        Symbol {
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BSPC |
+            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
+            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
+            //                    | GUI |     | SPC |   | ENT |     | ALT |
+
+            bindings = <
+&none  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &none
+&none  &none     &none   &none     &none     &kp TILDE    &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &none
+&none  &none     &none   &none     &none     &none        &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &none
+                         &trans    &trans    &trans       &trans     &trans     &trans
+            >;
+
+            label = "Sym";
+        };
+
+        Function {
+            bindings = <
+&none  &kp F1  &kp F2   &kp F3   &kp F4   &none     &none   &none      &none      &none     &none     &none
+&none  &kp F5  &kp F6   &kp F7   &kp F8   &none     &none   &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &none
+&none  &kp F9  &kp F10  &kp F11  &kp F12  &none     &none   &none      &none      &none     &none     &none
+                        &trans   &trans   &trans    &trans  &trans     &trans
+            >;
+
+            label = "Fun";
         };
     };
 };
