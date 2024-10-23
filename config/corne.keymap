@@ -40,9 +40,9 @@
 
         Arrow {
             bindings = <
-&none  &none      &none      &none      &none      &none        &none   &none     &none     &none   &none      &none
-&none  &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &none        &none   &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &none
-&none  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LG(V)  &kp LC(Y)    &none   &none     &none     &none   &none      &none
+&none  &none      &none      &none      &none      &none        &none   &none     &none          &none        &kp DELETE  &none
+&none  &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &none        &none   &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT   &none
+&none  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LG(V)  &kp LC(Y)    &none   &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END     &none
                              &trans     &trans     &trans       &trans  &trans    &trans
             >;
 
@@ -51,10 +51,10 @@
 
         Function {
             bindings = <
-&trans  &kp F1  &kp F2   &kp F3   &kp F4   &trans             &trans  &trans     &trans     &trans    &trans    &trans
-&trans  &kp F5  &kp F6   &kp F7   &kp F8   &trans             &trans  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &trans
-&trans  &kp F9  &kp F10  &kp F11  &kp F12  &kp PRINTSCREEN    &trans  &trans     &trans     &trans    &trans    &trans
-                         &trans   &kp TAB  &kp SPACE          &trans  &trans     &trans
+&none  &kp F1  &kp F2   &kp F3   &kp F4   &none              &none  &none      &none      &none     &none     &none
+&none  &kp F5  &kp F6   &kp F7   &kp F8   &none              &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &none
+&none  &kp F9  &kp F10  &kp F11  &kp F12  &kp PRINTSCREEN    &none  &none      &none      &none     &none     &none
+                        &none    &kp TAB  &kp SPACE          &none  &none      &none
             >;
 
             label = "Fun";
@@ -79,10 +79,10 @@
 
         Number {
             bindings = <
-&trans  &kp N1    &kp N2    &kp N3     &kp N4     &kp N5    &kp N6  &kp N7     &kp N8     &kp N9    &kp N0    &trans
-&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans    &trans  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &trans
-&trans  &trans    &trans    &trans     &trans     &trans    &trans  &trans     &trans     &trans    &trans    &trans
-                            &trans     &trans     &trans    &trans  &trans     &trans
+&none  &kp N1    &kp N2    &kp N3     &kp N4     &kp N5    &kp N6  &kp N7     &kp N8     &kp N9    &kp N0    &none
+&none  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none     &none   &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &none
+&none  &none     &none     &none      &none      &none     &none   &none      &none      &none     &none     &none
+                           &trans     &trans     &trans    &trans  &trans     &trans
             >;
 
             label = "Num";
@@ -90,10 +90,10 @@
 
         Media {
             bindings = <
-&trans  &trans    &trans    &trans     &trans     &trans    &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans             &trans           &trans        &trans
-&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans    &bt BT_CLR            &kp K_NEXT            &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_PREV    &trans
-&trans  &trans    &trans    &trans     &trans     &trans    &bt BT_SEL 0          &bt BT_SEL 1          &bt BT_SEL 2       &bt BT_SEL 3     &bt BT_SEL 4  &trans
-                            &trans     &trans     &trans    &kp K_PLAY_PAUSE      &kp K_STOP            &kp K_MUTE
+&trans  &trans    &trans    &trans     &trans     &trans    &kp PRINTSCREEN   &none           &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans        &trans
+&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans    &bt BT_CLR        &kp C_PREVIOUS  &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp C_NEXT    &trans
+&trans  &trans    &trans    &trans     &trans     &trans    &bt BT_SEL 0      &bt BT_SEL 1    &bt BT_SEL 2          &bt BT_SEL 3          &bt BT_SEL 4  &trans
+                            &trans     &trans     &trans    &kp C_PLAY_PAUSE  &kp C_STOP      &kp K_MUTE
             >;
 
             label = "Media";
