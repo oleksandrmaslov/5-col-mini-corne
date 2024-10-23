@@ -9,10 +9,19 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    macros {
+        lang: lang {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LS(LEFT_SHIFT))>;
+            label = "LANG";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        Base {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
@@ -20,11 +29,13 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp Q           &kp W           &kp E        &kp R             &kp T        &kp Y    &kp U           &kp I           &kp O        &kp P                &none
-&none  &mt A LEFT_GUI  &mt S LEFT_ALT  &mt D LCTRL  &mt F LEFT_SHIFT  &kp G        &kp H    &mt J LEFT_WIN  &mt K LEFT_ALT  &mt L LCTRL  &mt SEMI LEFT_SHIFT  &none
-&none  &kp Z           &kp X           &kp C        &kp V             &kp B        &kp N    &kp M           &kp COMMA       &kp DOT      &kp FSLH             &none
-                                       &kp LGUI     &mo 1             &kp SPACE    &kp RET  &mo 2           &kp RALT
+&none  &kp Q           &kp W           &kp E               &kp R             &kp T          &kp Y        &kp U             &kp I         &kp O           &kp P              &none
+&none  &mt A LEFT_GUI  &mt S LEFT_ALT  &mt D LCTRL         &mt F LEFT_SHIFT  &kp G          &kp H        &mt J LEFT_SHIFT  &mt K LCTRL   &mt L LEFT_ALT  &mt SEMI LEFT_WIN  &none
+&none  &kp Z           &kp X           &kp C               &kp V             &kp B          &kp N        &kp M             &kp COMMA     &kp DOT         &kp FSLH           &none
+                                       &kp LA(LEFT_SHIFT)  &lt 1 TAB         &lt 5 SPACE    &lt 3 ENTER  &kp BACKSPACE     &lt 6 ESCAPE
             >;
+
+            label = "Base";
         };
 
         lower_layer {
@@ -42,7 +53,18 @@
             >;
         };
 
-        raise_layer {
+        Arrow {
+            bindings = <
+&none  &none      &none      &none      &none      &none        &none   &none     &none     &none   &none      &none
+&none  &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &none        &none   &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &none
+&none  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LG(V)  &kp LC(Y)    &none   &none     &none     &none   &none      &none
+                             &trans     &trans     &trans       &trans  &trans    &trans
+            >;
+
+            label = "Move";
+        };
+
+        Symbol {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BSPC |
             // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
@@ -50,11 +72,46 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&kp LCTRL  &trans    &trans  &trans    &trans    &trans       &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&kp LSHFT  &trans    &trans  &trans    &trans    &trans       &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                             &kp LGUI  &trans    &kp SPACE    &kp RET    &trans     &kp RALT
+&none  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &none
+&none  &none     &none   &none     &none     &kp TILDE    &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &none
+&none  &none     &none   &none     &none     &none        &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &none
+                         &trans    &trans    &trans       &trans     &trans     &trans
             >;
+
+            label = "Sym";
+        };
+
+        Number {
+            bindings = <
+&trans  &kp N1    &kp N2    &kp N3     &kp N4     &kp N5    &kp N6  &kp N7     &kp N8     &kp N9    &kp N0    &trans
+&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans    &trans  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &trans
+&trans  &trans    &trans    &trans     &trans     &trans    &trans  &trans     &trans     &trans    &trans    &trans
+                            &trans     &trans     &trans    &trans  &trans     &trans
+            >;
+
+            label = "Num";
+        };
+
+        Media {
+            bindings = <
+&trans  &trans    &trans    &trans     &trans     &trans    &trans            &trans        &trans             &trans           &trans        &trans
+&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans    &bt BT_CLR        &kp K_NEXT    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_PREV    &trans
+&trans  &trans    &trans    &trans     &trans     &trans    &bt BT_SEL 0      &bt BT_SEL 1  &bt BT_SEL 2       &bt BT_SEL 3     &bt BT_SEL 4  &trans
+                            &trans     &trans     &trans    &kp K_PLAY_PAUSE  &kp K_STOP    &kp K_MUTE
+            >;
+
+            label = "Media";
+        };
+
+        Function {
+            bindings = <
+&trans  &kp F1  &kp F2   &kp F3   &kp F4   &trans             &trans  &trans     &trans     &trans    &trans    &trans
+&trans  &kp F5  &kp F6   &kp F7   &kp F8   &trans             &trans  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &trans
+&trans  &kp F9  &kp F10  &kp F11  &kp F12  &kp PRINTSCREEN    &trans  &trans     &trans     &trans    &trans    &trans
+                         &trans   &kp TAB  &kp SPACE          &trans  &trans     &trans
+            >;
+
+            label = "Fun";
         };
     };
 };
