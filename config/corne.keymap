@@ -51,10 +51,10 @@
 
         Move {
             bindings = <
-&none  &none      &none      &none      &none      &none        &none   &none     &none          &none        &kp DELETE  &none
-&none  &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &none        &none   &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT   &none
-&none  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LG(V)  &kp LC(Y)    &none   &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END     &none
-                             &trans     &trans     &trans       &trans  &trans    &trans
+&none  &none      &none      &none      &none      &kp PRINTSCREEN    &none   &none     &none          &none        &kp DELETE  &none
+&none  &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &none              &none   &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT   &none
+&none  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LG(V)  &kp LC(Y)          &none   &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END     &none
+                             &trans     &trans     &trans             &trans  &trans    &trans
             >;
 
             label = "Move";
