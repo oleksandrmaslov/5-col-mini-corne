@@ -18,6 +18,19 @@
         };
     };
 
+    behaviors {
+        new_behavior: new_behavior {
+            compatible = "zmk,behavior-hold-tap";
+            label = "NEW_BEHAVIOR";
+            #binding-cells = <2>;
+            hold-trigger-key-positions = <13 14 15 16 19 21 20 22>;
+            flavor = "balanced";
+            bindings = <&mt>, <&kp>;
+
+            tapping-term-ms = <200>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
