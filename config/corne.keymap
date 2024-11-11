@@ -24,7 +24,7 @@
             label = "NEW_BEHAVIOR";
             #binding-cells = <2>;
             hold-trigger-key-positions = <13 14 15 16 19 21 20 22>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             bindings = <&mt>, <&kp>;
 
             tapping-term-ms = <200>;
