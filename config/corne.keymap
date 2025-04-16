@@ -24,11 +24,12 @@
             label = "NEW_BEHAVIOR";
             #binding-cells = <2>;
             hold-trigger-key-positions = <13 14 15 16 19 21 20 22>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
             bindings = <&mt>, <&kp>;
 
-            tapping-term-ms = <200>;
-            quick-tap-ms = <150>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
         };
     };
 
