@@ -19,11 +19,10 @@
     };
 
     behaviors {
-        new_behavior: new_behavior {
+        mod_tap: mod_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "NEW_BEHAVIOR";
+            label = "MOD_TAP";
             #binding-cells = <2>;
-            hold-trigger-key-positions = <13 14 15 16 19 21 20 22>;
             flavor = "balanced";
             bindings = <&mt>, <&kp>;
 
@@ -45,10 +44,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp Q           &kp W           &kp E                 &kp R             &kp T          &kp Y        &kp U             &kp I         &kp O                 &mt SQT P               &none
-&none  &mt LEFT_WIN A  &mt LEFT_ALT S  &mt LCTRL D           &mt LEFT_SHIFT F  &kp G          &kp H        &mt LEFT_SHIFT J  &mt LCTRL K   &mt LEFT_ALT L        &mt LEFT_WIN SEMI       &none
-&none  &kp Z           &kp X           &kp C                 &kp V             &kp B          &kp N        &kp M             &kp COMMA     &mt LEFT_BRACKET DOT  &mt RIGHT_BRACKET FSLH  &none
-                                       &lt 1 LA(LEFT_SHIFT)  &lt 2 TAB         &lt 3 SPACE    &lt 4 ENTER  &kp BACKSPACE     &lt 5 ESCAPE
+&none  &kp Q                &kp W                &kp E                 &kp R                  &kp T          &kp Y        &kp U                  &kp I             &kp O                 &mt SQT P               &none
+&none  &mod_tap LEFT_WIN A  &mod_tap LEFT_ALT S  &mod_tap LCTRL D      &mod_tap LEFT_SHIFT F  &kp G          &kp H        &mod_tap LEFT_SHIFT J  &mod_tap LCTRL K  &mod_tap LEFT_ALT L   &mod_tap LEFT_WIN SEMI  &none
+&none  &kp Z                &kp X                &kp C                 &kp V                  &kp B          &kp N        &kp M                  &kp COMMA         &mt LEFT_BRACKET DOT  &mt RIGHT_BRACKET FSLH  &none
+                                                 &lt 1 LA(LEFT_SHIFT)  &lt 2 TAB              &lt 3 SPACE    &lt 4 ENTER  &kp BACKSPACE          &lt 5 ESCAPE
             >;
 
             label = "Base";
@@ -106,7 +105,7 @@
 
         Function {
             bindings = <
-&none  &kp F1  &kp F2   &kp F3   &kp F4   &none     &none   &none      &none      &none     &none     &kp A
+&none  &kp F1  &kp F2   &kp F3   &kp F4   &none     &none   &none      &none      &none     &none     &none
 &none  &kp F5  &kp F6   &kp F7   &kp F8   &none     &none   &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &none
 &none  &kp F9  &kp F10  &kp F11  &kp F12  &none     &none   &none      &none      &none     &none     &none
                         &trans   &trans   &trans    &trans  &trans     &trans
