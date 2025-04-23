@@ -17,7 +17,7 @@ manifest:
       remote: oleksandrmaslov
       revision: peripheral
     - name: zmk-raw-hid 
-      remote: zzeneg
+      remote: oleksandrmaslov
       revision: main
   self:
     path: config
