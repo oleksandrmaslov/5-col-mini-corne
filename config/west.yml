@@ -4,6 +4,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: zzeneg 
       url-base: https://github.com/zzeneg
+    - name: oleksandrmaslov
+      url-base: https://github.com/oleksandrmaslov
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
@@ -12,7 +14,7 @@ manifest:
       revision: main
       import: app/west.yml
     - name: zmk-nice-view-hid 
-      remote: zzeneg
+      remote: oleksandrmaslov
       revision: main
     - name: zmk-raw-hid 
       remote: zzeneg
