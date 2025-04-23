@@ -15,7 +15,7 @@ manifest:
       import: app/west.yml
     - name: zmk-nice-view-hid 
       remote: oleksandrmaslov
-      revision: main
+      revision: peripheral
     - name: zmk-raw-hid 
       remote: zzeneg
       revision: main
