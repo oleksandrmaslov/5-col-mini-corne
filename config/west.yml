@@ -11,11 +11,11 @@ manifest:
   projects:
     - name: zmk
       remote: oleksandrmaslov
-      revision: raw-hid
+      revision: main
       import: app/west.yml
     - name: zmk-nice-view-hid 
       remote: oleksandrmaslov
-      revision: peripheral
+      revision: central
     - name: zmk-raw-hid 
       remote: oleksandrmaslov
       revision: main
