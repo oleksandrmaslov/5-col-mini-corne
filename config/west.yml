@@ -18,6 +18,6 @@ manifest:
       revision: peripheral-2
     - name: zmk-raw-hid 
       remote: oleksandrmaslov
-      revision: main
+      revision: peripheral
   self:
     path: config
