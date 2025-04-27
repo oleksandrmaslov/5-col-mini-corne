@@ -13,11 +13,5 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    - name: zmk-nice-view-hid 
-      remote: oleksandrmaslov
-      revision: peripheral
-    - name: zmk-raw-hid 
-      remote: zzeneg
-      revision: main
   self:
     path: config
