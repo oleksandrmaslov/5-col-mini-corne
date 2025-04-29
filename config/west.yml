@@ -10,14 +10,14 @@ manifest:
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
     - name: zmk
-      remote: oleksandrmaslov
-      revision: hid
+      remote: zmkfirmware
+      revision: main
       import: app/west.yml
     - name: zmk-nice-view-hid 
       remote: oleksandrmaslov
       revision: peripheral-2
     - name: zmk-raw-hid 
       remote: oleksandrmaslov
-      revision: peripheral
+      revision: peripheral-2
   self:
     path: config
