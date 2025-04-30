@@ -10,7 +10,7 @@ manifest:
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
     - name: zmk
-      remote: zmkfirmware
+      remote: oleksandrmaslov
       revision: main
       import: app/west.yml
     - name: zmk-nice-view-hid 
