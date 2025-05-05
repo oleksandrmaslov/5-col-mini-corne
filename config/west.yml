@@ -13,14 +13,14 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    - name: zmk-split-peripheral-output-relay  # <-- new
-      remote: badjeff
-      revision: main
+    - name: zmk-split-peripheral-output-relay
+      remote: oleksandrmaslov
+      revision: peripheral
     - name: zmk-nice-view-hid 
       remote: oleksandrmaslov
       revision: peripheral-2
     - name: zmk-raw-hid 
       remote: oleksandrmaslov
-      revision: peripheral-2
+      revision: gatt-peripheral
   self:
     path: config
