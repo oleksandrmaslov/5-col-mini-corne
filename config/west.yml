@@ -21,6 +21,6 @@ manifest:
       revision: peripheral-2
     - name: zmk-raw-hid 
       remote: oleksandrmaslov
-      revision: gatt-peripheral
+      revision: gatt
   self:
     path: config
