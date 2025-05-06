@@ -24,15 +24,3 @@
         , <&pro_micro 21 GPIO_ACTIVE_HIGH>
         ;
 };
-
-/ {
-    nice_view_out: nice_view_out {
-        compatible = "zmk,output-generic";
-        #binding-cells = <0>;
-    };
-    now_playing_recv {
-        compatible = "zmk,split-peripheral-output-relay";
-        device = <&nice_view_out>;
-        relay-channel = <1>;
-    };
-};
