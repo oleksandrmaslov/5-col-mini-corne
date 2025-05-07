@@ -14,8 +14,8 @@ manifest:
       revision: main
       import: app/west.yml
     - name: zmk-split-peripheral-output-relay
-      remote: oleksandrmaslov
-      revision: peripheral
+      remote: badjeff
+      revision: main
     - name: zmk-nice-view-hid 
       remote: oleksandrmaslov
       revision: peripheral-2
