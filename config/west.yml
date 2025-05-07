@@ -18,7 +18,7 @@ manifest:
       revision: main
     - name: zmk-nice-view-hid 
       remote: oleksandrmaslov
-      revision: peripheral-2
+      revision: peripheral-3
     - name: zmk-raw-hid 
       remote: oleksandrmaslov
       revision: gatt-fix-2
