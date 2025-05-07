@@ -17,3 +17,20 @@
         ;
 };
 
+/ {
+    now_playing_dummy: now_playing_dummy {
+        compatible = "zmk,output-split-output-relay";
+        #binding-cells = <0>;
+    };
+
+    now_playing_artist: now_playing_artist {
+        compatible = "zmk,split-peripheral-output-relay";
+        device = <&now_playing_dummy>;
+        relay-channel = <10>;
+    };
+    now_playing_track: now_playing_track {
+        compatible = "zmk,split-peripheral-output-relay";
+        device = <&now_playing_dummy>;
+        relay-channel = <11>;
+    };
+};
