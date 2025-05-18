@@ -2,16 +2,14 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: zzeneg 
-      url-base: https://github.com/zzeneg
     - name: oleksandrmaslov
       url-base: https://github.com/oleksandrmaslov
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
     - name: zmk
-      remote: zmkfirmware
-      revision: main
+      remote: oleksandrmaslov
+      revision: qr-code-telegram
       import: app/west.yml
   self:
     path: config
