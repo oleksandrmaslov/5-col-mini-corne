@@ -25,7 +25,7 @@
         ;
 };
 
-&split {
+/ {
     now_playing_dev: now_playing_dev {
         compatible = "zmk,split-peripheral-output-relay";
         device = <&split>;
