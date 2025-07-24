@@ -19,8 +19,13 @@
 
 / {
     now_playing_dev: now_playing_dev {
+        compatible = "zmk,output-split-output-relay";
+        #binding-cells = <0>;
+    };
+
+    now_playing_relay: now_playing_relay {
         compatible = "zmk,split-peripheral-output-relay";
-        device = <&split>;     /* virtual device used for relay */
-        relay-channel = <1>;
+        device = <&now_playing_dev>;
+        relay-channel = <1>; /* must match CONFIG_RAW_HID_SPLIT_CHANNEL */
     };
 };
