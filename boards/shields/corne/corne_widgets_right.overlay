@@ -25,24 +25,10 @@
         ;
 };
 
-/ {
-    artist_out: artist_out {
-        compatible = "zmk,output-generic";
-        #binding-cells = <0>;
-    };
-    artist_relay: artist_relay {
+&split {
+    now_playing_dev: now_playing_dev {
         compatible = "zmk,split-peripheral-output-relay";
-        relay-channel = <10>;
-        device = <&artist_out>;
-    };
-
-    track_out: track_out {
-        compatible = "zmk,output-generic";
-        #binding-cells = <0>;
-    };
-    track_relay: track_relay {
-        compatible = "zmk,split-peripheral-output-relay";
-        relay-channel = <11>;
-        device = <&track_out>;
+        device = <&split>;
+        relay-channel = <1>;
     };
 };
