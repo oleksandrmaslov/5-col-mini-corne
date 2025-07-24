@@ -21,6 +21,6 @@ manifest:
       revision: peripheral-2
     - name: zmk-raw-hid 
       remote: oleksandrmaslov
-      revision: forwarding
+      revision: main
   self:
     path: config
