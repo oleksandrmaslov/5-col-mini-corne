@@ -37,3 +37,10 @@
         relay-channel = <1>;
     };
 };
+
+/ {
+    aliases {
+        /* Привязываем now_playing_dev к OLED-дисплею */
+        now_playing_dev = &nice_view;
+    };
+};
