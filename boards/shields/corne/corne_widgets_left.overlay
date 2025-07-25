@@ -18,21 +18,20 @@
 };
 
 / {
-    now_playing_dev: now_playing_dev {
-        compatible = "zmk,output-split-output-relay";
-        #binding-cells = <0>;
-    };
-
+    /* Узел split-peripheral-output-relay: отправляет команды на OLED‑дисплей */
     now_playing_relay: now_playing_relay {
         compatible = "zmk,split-peripheral-output-relay";
-        device = <&now_playing_dev>;
-        relay-channel = <1>; /* must match CONFIG_RAW_HID_SPLIT_CHANNEL */
+        /* Phandle на ваш дисплей (имя узла в DTS: nice_view или display0 и т.п.) */
+        device = <&nice_view>;
+        /* Должно совпадать с CONFIG_RAW_HID_SPLIT_CHANNEL в corne.conf */
+        relay-channel = <1>;
     };
-};
 
-/ {
     aliases {
-        /* Привязываем now_playing_dev к OLED-дисплею */
+        /*
+         * Алиас now-playing-dev отображается в C‑коде как DT_ALIAS(now_playing_dev)
+         * и подтягивает устройство nice_view через макрос DEVICE_DT_GET_OR_NULL.
+         */
         now-playing-dev = &nice_view;
     };
 };
