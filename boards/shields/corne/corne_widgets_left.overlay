@@ -29,3 +29,10 @@
         relay-channel = <1>; /* must match CONFIG_RAW_HID_SPLIT_CHANNEL */
     };
 };
+
+/ {
+    aliases {
+        /* Привязываем now_playing_dev к OLED-дисплею */
+        now_playing_dev = &nice_view;
+    };
+};
