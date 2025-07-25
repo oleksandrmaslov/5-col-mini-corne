@@ -22,5 +22,8 @@ manifest:
     - name: zmk-raw-hid 
       remote: oleksandrmaslov
       revision: main
+    - name: zmk-output-behavior-listener
+      remote: badjeff
+      revision: main
   self:
     path: config
