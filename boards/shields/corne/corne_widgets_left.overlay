@@ -21,7 +21,6 @@
     nice_view_adapter: nice_view_adapter {
         status = "okay";
         compatible = "zmk,output-split-output-relay";
-        label = "NICE_VIEW_ADAPTER";       /* уникальная строка */
         #binding-cells = <0>;
     };
 
