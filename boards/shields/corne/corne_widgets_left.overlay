@@ -18,18 +18,17 @@
 };
 
 / {
-    /* 1) Источник выходных событий — узел из nice_view_adapter */
     nice_view_adapter: nice_view_adapter {
         status = "okay";
         compatible = "zmk,output-split-output-relay";
+        label = "NICE_VIEW_ADAPTER";       /* уникальная строка */
         #binding-cells = <0>;
     };
 
-    /* 2) Конфигурация канала 1 для отправки на периферию */
     nice_view_adapter_cfg: nice_view_adapter_cfg {
         status = "okay";
         compatible = "zmk,split-peripheral-output-relay";
         device = <&nice_view_adapter>;
-        relay-channel = <1>;   /* должно совпадать с CONFIG_RAW_HID_SPLIT_CHANNEL */
+        relay-channel = <1>;
     };
 };
