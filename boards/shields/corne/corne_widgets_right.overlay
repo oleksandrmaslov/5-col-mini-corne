@@ -6,6 +6,14 @@
 
 #include "corne_widgets.dtsi"
 
+/{
+    rawhid_or: rawhid_or {
+        compatible = "zmk,split-peripheral-output-relay";
+        relay-channel = <1>;
+        device = <&raw_hid>;
+    };
+};
+
 &default_transform {
     col-offset = <6>;
 };

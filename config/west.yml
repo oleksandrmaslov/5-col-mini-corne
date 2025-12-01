@@ -15,12 +15,12 @@ manifest:
       import: app/west.yml
     - name: zmk-split-peripheral-output-relay
       remote: oleksandrmaslov
-      revision: peripheral
+      revision: split-raw
     - name: zmk-nice-view-hid 
       remote: oleksandrmaslov
-      revision: peripheral-2
+      revision: split-raw
     - name: zmk-raw-hid 
       remote: oleksandrmaslov
-      revision: gatt-fix
+      revision: main
   self:
     path: config

@@ -6,6 +6,14 @@
 
 #include "corne_widgets.dtsi"
 
+/{
+    rawhid_or: rawhid_or {
+        compatible = "zmk,split-peripheral-output-relay";
+        relay-channel = <1>;
+        device = <&raw_hid>;
+    };
+};
+
 &kscan0 {
     col-gpios
         = <&pro_micro 21 GPIO_ACTIVE_HIGH>
