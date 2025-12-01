@@ -10,7 +10,7 @@
     rawhid_or: rawhid_or {
         compatible = "zmk,split-peripheral-output-relay";
         relay-channel = <1>;
-        device = <&raw_hid>;
+        device = <&nice_view>;
     };
 };
 
