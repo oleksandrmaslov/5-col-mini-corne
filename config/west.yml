@@ -8,8 +8,11 @@ manifest:
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
     - name: zmk
-      remote: oleksandrmaslov
+      remote: zmkfirmware
       revision: main
       import: app/west.yml
+    - name: zmk-peripheral-pomodoro
+      remote: oleksandrmaslov
+      revision: main
   self:
     path: config
