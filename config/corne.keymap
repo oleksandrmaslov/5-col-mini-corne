@@ -7,7 +7,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/pointing.h>
 
 / {
     macros {
@@ -34,14 +33,7 @@
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        Mouse_layer {
-            bindings = <&tog 6>;
-            key-positions = <41 40>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
@@ -122,15 +114,6 @@
             >;
 
             label = "Fun";
-        };
-
-        Mouse {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans     &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans          &trans          &trans           &trans  &trans
-                        &trans  &trans  &trans    &mkp LCLK  &mkp RCLK       &trans
-            >;
         };
     };
 };
