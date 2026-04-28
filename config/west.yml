@@ -16,9 +16,9 @@ manifest:
     - name: zmk-split-peripheral-output-relay
       remote: oleksandrmaslov
       revision: split-raw
-    - name: zmk-nice-view-hid 
+    - name: zmk-nice-view-hid
       remote: oleksandrmaslov
-      revision: codex/nice-view-hid-ui-rework
+      revision: codex/nice-view-hid-longer-text
     - name: zmk-raw-hid 
       remote: oleksandrmaslov
       revision: main
