@@ -18,7 +18,7 @@ manifest:
       revision: split-raw
     - name: zmk-nice-view-hid
       remote: oleksandrmaslov
-      revision: codex/nice-view-hid-longer-text
+      revision: codex/svg-ui-media-20260429
     - name: zmk-raw-hid 
       remote: oleksandrmaslov
       revision: main
