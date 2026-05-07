@@ -15,12 +15,12 @@ manifest:
       import: app/west.yml
     - name: zmk-split-peripheral-output-relay
       remote: oleksandrmaslov
-      revision: split-raw
+      revision: codex/raw-hid-split-chunking
     - name: zmk-nice-view-hid 
       remote: oleksandrmaslov
       revision: codex/nice-view-hid-ui-rework
     - name: zmk-raw-hid 
       remote: oleksandrmaslov
-      revision: main
+      revision: codex/raw-hid-split-chunking
   self:
     path: config
