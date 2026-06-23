@@ -6,21 +6,16 @@ manifest:
       url-base: https://github.com/zzeneg
     - name: oleksandrmaslov
       url-base: https://github.com/oleksandrmaslov
-    - name: badjeff
-      url-base: https://github.com/badjeff
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    - name: zmk-split-peripheral-output-relay
+    - name: zmk-split-hid-display
       remote: oleksandrmaslov
-      revision: codex/raw-hid-split-chunking
-    - name: zmk-nice-view-hid 
+      revision: main
+    - name: zmk-soft-off-plus
       remote: oleksandrmaslov
-      revision: codex/nice-view-hid-ui-rework
-    - name: zmk-raw-hid 
-      remote: oleksandrmaslov
-      revision: codex/raw-hid-split-chunking
+      revision: main
   self:
     path: config

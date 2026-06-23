@@ -19,10 +19,10 @@
 ---
 include:
   - board: nice_nano//zmk
-    shield: corne_widgets_left nice_view_adapter nice_view_hid_adapter raw_hid_adapter
+    shield: corne_widgets_left nice_view_hid_adapter nice_view_hid raw_hid
     snippet: zmk-usb-logging
   - board: nice_nano//zmk
-    shield: corne_widgets_right nice_view_adapter nice_view_hid_adapter raw_hid_adapter
+    shield: corne_widgets_right nice_view_hid_adapter nice_view_hid raw_hid
     snippet: zmk-usb-logging
   - board: nice_nano//zmk
     shield: settings_reset

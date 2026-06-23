@@ -71,6 +71,46 @@ RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)  RC(2,6) RC(2,7) RC(2,8) RC(2,9) RC(2,10
     };
 
     // TODO: per-key RGB node(s)?
+
+    behaviors {
+        /* Hold and release the matrix (0,0) key to power off both halves. */
+        soft_off_plus: soft_off_plus {
+            compatible = "zmk,behavior-soft-off-plus";
+            #binding-cells = <0>;
+            hold-time-ms = <1200>;
+        };
+    };
+
+    /* Row 0 is shared. Each half supplies its local column-0 GPIO in its
+     * overlay because the left and right column wiring is mirrored. */
+    soft_off_keys {
+        compatible = "gpio-keys";
+
+        soft_off_gpio_key: soft_off_gpio_key {
+            gpios = <&pro_micro 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+        };
+    };
+
+    soft_off_wakeup: soft_off_wakeup {
+        compatible = "zmk,gpio-key-wakeup-trigger";
+        trigger = <&soft_off_gpio_key>;
+        wakeup-source;
+    };
+
+    /* Only local matrix (0,0) wakes each half from soft off. */
+    soft_off_wakers {
+        compatible = "zmk,soft-off-wakeup-sources";
+        wakeup-sources = <&soft_off_wakeup>;
+    };
+
+    /* The same key must remain held after wake, otherwise the half returns to
+     * System OFF. Each half supplies the matching strobe GPIO in its overlay. */
+    soft_off_plus_wake: soft_off_plus_wake {
+        compatible = "zmk,soft-off-plus-wake";
+        wake-gpios = <&pro_micro 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+        wake-hold-ms = <1200>;
+        bypass-on-usb;
+    };
 };
 
 
