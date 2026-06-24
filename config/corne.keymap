@@ -49,7 +49,7 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&soft_off_plus  &kp Q                &kp W                &kp E                 &kp R                  &kp T          &soft_off_plus  &kp U                  &kp I             &kp O                 &mt SQT P               &none
+&soft_off_plus  &soft_off_plus    &kp W                &kp E                 &kp R                  &kp T          &soft_off_plus  &kp U                  &kp I             &kp O                 &soft_off_plus               &none
 &none  &mod_tap LEFT_WIN A  &mod_tap LEFT_ALT S  &mod_tap LCTRL D      &mod_tap LEFT_SHIFT F  &kp G          &kp H        &mod_tap LEFT_SHIFT J  &mod_tap LCTRL K  &mod_tap LEFT_ALT L   &mod_tap LEFT_WIN SEMI  &none
 &none  &kp Z                &kp X                &kp C                 &kp V                  &kp B          &kp N        &kp M                  &kp COMMA         &mt LEFT_BRACKET DOT  &mt RIGHT_BRACKET FSLH  &none
                                                  &lt 1 LA(LEFT_SHIFT)  &lt 2 TAB              &lt 3 SPACE    &lt 4 ENTER  &kp BACKSPACE          &lt 5 ESCAPE
@@ -60,7 +60,7 @@
 
         Media {
             bindings = <
-&soft_off_plus  &trans    &trans    &trans     &trans     &bt BT_CLR    &soft_off_plus   &none           &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans        &trans
+&soft_off_plus  &soft_off_plus    &trans    &trans     &trans     &bt BT_CLR    &soft_off_plus   &none           &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans        &trans
 &trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans        &none             &kp C_PREVIOUS  &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp C_NEXT    &trans
 &trans  &trans    &trans    &trans     &trans     &trans        &bt BT_SEL 0      &bt BT_SEL 1    &bt BT_SEL 2          &bt BT_SEL 3          &bt BT_SEL 4  &trans
                             &trans     &trans     &trans        &kp C_PLAY_PAUSE  &kp C_STOP      &kp C_MUTE
