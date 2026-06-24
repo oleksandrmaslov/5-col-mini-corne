@@ -49,10 +49,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&soft_off_plus  &soft_off_plus    &kp W                &kp E                 &kp R                  &kp T          &soft_off_plus  &kp U                  &kp I             &kp O                 &soft_off_plus               &none
-&none  &mod_tap LEFT_WIN A  &mod_tap LEFT_ALT S  &mod_tap LCTRL D      &mod_tap LEFT_SHIFT F  &kp G          &kp H        &mod_tap LEFT_SHIFT J  &mod_tap LCTRL K  &mod_tap LEFT_ALT L   &mod_tap LEFT_WIN SEMI  &none
-&none  &kp Z                &kp X                &kp C                 &kp V                  &kp B          &kp N        &kp M                  &kp COMMA         &mt LEFT_BRACKET DOT  &mt RIGHT_BRACKET FSLH  &none
-                                                 &lt 1 LA(LEFT_SHIFT)  &lt 2 TAB              &lt 3 SPACE    &lt 4 ENTER  &kp BACKSPACE          &lt 5 ESCAPE
+                &soft_off_plus  &soft_off_plus  &kp W  &kp E  &kp R  &kp T  &soft_off_plus  &kp U  &kp I  &kp O  &soft_off_plus  &none
+                &none  &mod_tap LEFT_WIN A  &mod_tap LEFT_ALT S  &mod_tap LCTRL D  &mod_tap LEFT_SHIFT F  &kp G  &kp H  &mod_tap LEFT_SHIFT J  &mod_tap LCTRL K  &mod_tap LEFT_ALT L  &mod_tap LEFT_WIN SEMI  &none
+                &none  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA  &mt LEFT_BRACKET DOT  &mt RIGHT_BRACKET FSLH  &none
+                                           &lt 1 LA(LEFT_SHIFT)  &lt 2 TAB  &lt 3 SPACE  &lt 4 ENTER  &kp BACKSPACE  &lt 5 ESCAPE
             >;
 
             label = "Base";
@@ -60,10 +60,10 @@
 
         Media {
             bindings = <
-&soft_off_plus  &soft_off_plus    &trans    &trans     &trans     &bt BT_CLR    &soft_off_plus   &none           &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans        &trans
-&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans        &none             &kp C_PREVIOUS  &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp C_NEXT    &trans
-&trans  &trans    &trans    &trans     &trans     &trans        &bt BT_SEL 0      &bt BT_SEL 1    &bt BT_SEL 2          &bt BT_SEL 3          &bt BT_SEL 4  &trans
-                            &trans     &trans     &trans        &kp C_PLAY_PAUSE  &kp C_STOP      &kp C_MUTE
+                &soft_off_plus  &soft_off_plus  &trans  &trans  &trans  &bt BT_CLR  &soft_off_plus  &none  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans  &trans
+                &trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans  &none  &kp C_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
+                                &trans  &trans  &trans  &kp C_PLAY_PAUSE  &kp C_STOP  &kp C_MUTE
             >;
 
             label = "Media";
@@ -71,10 +71,10 @@
 
         Move {
             bindings = <
-&soft_off_plus  &none      &none      &none      &none      &kp PRINTSCREEN    &soft_off_plus   &none     &none          &none        &kp DELETE  &none
-&none  &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &none              &none   &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT   &none
-&none  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LG(V)  &kp LC(Y)          &none   &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END     &none
-                             &trans     &trans     &trans             &trans  &trans    &trans
+                &soft_off_plus  &none  &none  &none  &none  &kp PRINTSCREEN  &soft_off_plus  &none  &none  &none  &kp DELETE  &none
+                &none  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none  &none  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &none
+                &none  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LG(V)  &kp LC(Y)  &none  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END  &none
+                                &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             label = "Move";
@@ -82,10 +82,10 @@
 
         Number {
             bindings = <
-&soft_off_plus  &kp N1    &kp N2    &kp N3     &kp N4     &kp N5    &soft_off_plus  &kp N7     &kp N8     &kp N9    &kp N0    &none
-&none  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none     &none   &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &none
-&none  &none     &none     &none      &none      &none     &none   &none      &none      &none     &none     &none
-                           &trans     &trans     &trans    &trans  &trans     &trans
+                &soft_off_plus  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &soft_off_plus  &kp N7  &kp N8  &kp N9  &kp N0  &none
+                &none  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none  &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &none
+                &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
+                                &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             label = "Num";
@@ -99,10 +99,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&soft_off_plus  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &soft_off_plus  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &none
-&none  &none     &none   &none     &none     &kp TILDE    &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &none
-&none  &none     &none   &none     &none     &none        &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &none
-                         &trans    &trans    &trans       &trans     &trans     &trans
+                &soft_off_plus  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &soft_off_plus  &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR  &none
+                &none  &none  &none  &none  &none  &kp TILDE  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT  &kp BSLH  &none
+                &none  &none  &none  &none  &none  &none  &kp UNDER  &kp PLUS  &kp LBRC  &kp RBRC  &kp PIPE  &none
+                                &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             label = "Sym";
@@ -110,10 +110,10 @@
 
         Function {
             bindings = <
-&soft_off_plus  &kp F1  &kp F2   &kp F3   &kp F4   &none     &soft_off_plus   &none      &none      &none     &none     &none
-&none  &kp F5  &kp F6   &kp F7   &kp F8   &none     &none   &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &none
-&none  &kp F9  &kp F10  &kp F11  &kp F12  &none     &none   &none      &none      &none     &none     &none
-                        &trans   &trans   &trans    &trans  &trans     &trans
+                &soft_off_plus  &kp F1  &kp F2  &kp F3  &kp F4  &none  &soft_off_plus  &none  &none  &none  &none  &none
+                &none  &kp F5  &kp F6  &kp F7  &kp F8  &none  &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &none
+                &none  &kp F9  &kp F10  &kp F11  &kp F12  &none  &none  &none  &none  &none  &none  &none
+                                &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             label = "Fun";
