@@ -7,11 +7,11 @@
 #include "corne_widgets.dtsi"
 
 &soft_off_wakeup {
-    extra-gpios = <&pro_micro 21 GPIO_ACTIVE_HIGH>;
+    extra-gpios = <&pro_micro 20 GPIO_ACTIVE_HIGH>;
 };
 
 &soft_off_plus_wake {
-    strobe-gpios = <&pro_micro 21 GPIO_ACTIVE_HIGH>;
+    strobe-gpios = <&pro_micro 20 GPIO_ACTIVE_HIGH>;
 };
 
 &kscan0 {
